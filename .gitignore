@@ -55,3 +55,6 @@ target/
 
 # Sqlite database
 db.sqlite3
+
+# Local settings
+settings.py
