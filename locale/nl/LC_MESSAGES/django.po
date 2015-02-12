@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-12 11:20+0000\n"
+"POT-Creation-Date: 2015-02-12 11:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,8 +29,8 @@ msgid "Contact"
 msgstr "Contact"
 
 #: landing/templates/landing.html:78
-msgid "Real problems. Real solutions. Real learning."
-msgstr "Echte problemen. Echte oplossingen. Echt leerzaam."
+msgid "Real&nbsp;problems. Real&nbsp;solutions. Real&nbsp;learning."
+msgstr "Echte&nbsp;problemen. Echte&nbsp;oplossingen. Echt&nbsp;leerzaam."
 
 #: landing/templates/landing.html:79
 msgid "Registration opens 30 March 2015"
