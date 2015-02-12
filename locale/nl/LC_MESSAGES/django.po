@@ -1,4 +1,4 @@
-# SOME DESCRIPTIVE TITLE.
+# Dutch translation of the nxtcity site
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-11 21:49+0000\n"
+"POT-Creation-Date: 2015-02-12 11:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,42 +38,35 @@ msgstr "Inschrijvingen starten op 30 maart 2015"
 
 #: landing/templates/landing.html:94
 msgctxt "header"
-msgid "About NxtAms15"
-msgstr "Over NxtAms15"
+msgid "About NxtCity"
+msgstr "Over NxtCity"
 
 #: landing/templates/landing.html:96
+#, fuzzy
 msgid ""
-"NxtAms15 is the first edition of NxtCity (pronounced <i>next city</i>), held "
-"in Amsterdam at the end of August. During this event, high school students "
-"take on the challenge of tackling future problems of their city."
+"The first edition of NxtCity (pronounced <i>next city</i>) will be held in "
+"Amsterdam at the end of August. During this event, high school students take "
+"on the challenge of tackling future problems of their city."
 msgstr ""
-"NxtAms15 is de eerste editie van NxtCity (Engelse uitspraak: <i>next city</"
-"i>), gehouden in Amsterdam aan het einde van Augustus. Tijdens dit evenement "
-"zullen middelbare scholieren de uitdaging aangaan om de toekomstige "
-"problemen van hun stad aan te pakken."
+"De eerste editie van NxtCity (Engelse uitspraak: <i>next city</i>), wordt "
+"eind augustus gehouden in Amsterdam. Tijdens dit evenement zullen middelbare "
+"scholieren de uitdaging aangaan om de toekomstige problemen van hun stad aan "
+"te pakken."
 
 #: landing/templates/landing.html:99
 msgid "More information is coming soon."
-msgstr "Meer information komt binnenkort beschikbaar."
+msgstr "Meer informatie komt binnenkort beschikbaar."
 
 #: landing/templates/landing.html:109
 msgctxt "header"
-msgid "Contact NxtAms15"
-msgstr "Neem contact op met NxtAms15"
+msgid "Contact NxtCity"
+msgstr "Neem contact op met NxtCity"
 
 #: landing/templates/landing.html:110
 msgid "Feel free to email us for more information!"
-msgstr "Voel u vrij om ons te emailen voor meer informatie!"
+msgstr "Stuur ons een email voor meer informatie."
 
 #: landing/templates/landing.html:133
-msgid "NxtAms15 is made possible by <a href='http://codecult.nl'>CodeCult</a>."
+msgid "NxtCity is made possible by <a href='http://codecult.nl'>CodeCult</a>."
 msgstr ""
-"NxtAms15 is mogelijk gemaakt door <a href='http://codecult.nl'>CodeCult</a>."
-
-#, fuzzy
-#~ msgid "Context:"
-#~ msgstr "Contact"
-
-#, fuzzy
-#~ msgid "Content"
-#~ msgstr "Contact"
+"NxtCity is mogelijk gemaakt door <a href='http://codecult.nl'>CodeCult</a>."
