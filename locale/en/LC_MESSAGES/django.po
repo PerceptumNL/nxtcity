@@ -1,4 +1,4 @@
-# Dutch translation of the nxtcity site
+# English translation of the nxtcity site
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-12 11:29+0000\n"
+"POT-Creation-Date: 2015-02-13 23:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,12 +16,11 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: landing/templates/landing.html:58
 msgctxt "header"
-msgid "About"
-msgstr "Uitleg"
+msgid "Uitleg"
+msgstr "About"
 
 #: landing/templates/landing.html:61
 msgctxt "header"
@@ -29,44 +28,43 @@ msgid "Contact"
 msgstr "Contact"
 
 #: landing/templates/landing.html:78
-msgid "Real&nbsp;problems. Real&nbsp;solutions. Real&nbsp;learning."
-msgstr "Echte&nbsp;problemen. Echte&nbsp;oplossingen. Echt&nbsp;leerzaam."
+msgid "Echte&nbsp;problemen. Echte&nbsp;oplossingen. Echt&nbsp;leerzaam."
+msgstr "Real&nbsp;problems. Real&nbsp;solutions. Real&nbsp;learning."
 
 #: landing/templates/landing.html:79
-msgid "Registration opens 30 March 2015"
-msgstr "Inschrijvingen starten op 30 maart 2015"
+msgid "Inschrijvingen starten op 1 maart 2015"
+msgstr "Registration opens 1st of March"
 
 #: landing/templates/landing.html:94
 msgctxt "header"
-msgid "About NxtCity"
-msgstr "Over NxtCity"
+msgid "Over NxtCity"
+msgstr "About NxtCity"
 
 #: landing/templates/landing.html:96
-#, fuzzy
 msgid ""
-"The first edition of NxtCity (pronounced <i>next city</i>) will be held in "
-"Amsterdam at the end of August. During this event, high school students take "
-"on the challenge of tackling future problems of their city."
-msgstr ""
 "De eerste editie van NxtCity (Engelse uitspraak: <i>next city</i>), wordt "
 "eind augustus gehouden in Amsterdam. Tijdens dit evenement zullen middelbare "
 "scholieren de uitdaging aangaan om de toekomstige problemen van hun stad aan "
 "te pakken."
+msgstr ""
+"The first edition of NxtCity (pronounced <i>next city</i>) will be held in "
+"Amsterdam at the end of August. During this event, high school students take "
+"on the challenge of tackling future problems of their city."
 
 #: landing/templates/landing.html:99
-msgid "More information is coming soon."
-msgstr "Meer informatie komt binnenkort beschikbaar."
+msgid "Meer informatie komt binnenkort beschikbaar."
+msgstr "More information is coming soon."
 
 #: landing/templates/landing.html:109
 msgctxt "header"
-msgid "Contact NxtCity"
-msgstr "Neem contact op met NxtCity"
+msgid "Neem contact op met NxtCity"
+msgstr "Contact NxtCity"
 
 #: landing/templates/landing.html:110
-msgid "Feel free to email us for more information!"
-msgstr "Stuur ons een email voor meer informatie."
+msgid "Voor meer informatie kunt u ons een email sturen."
+msgstr "Please email us for more information."
 
-#: landing/templates/landing.html:133
-msgid "NxtCity is made possible by <a href='http://codecult.nl'>CodeCult</a>."
-msgstr ""
+#: landing/templates/landing.html:132
+msgid ""
 "NxtCity is mogelijk gemaakt door <a href='http://codecult.nl'>CodeCult</a>."
+msgstr "NxtCity is made possible by <a href='http://codecult.nl'>CodeCult</a>."
