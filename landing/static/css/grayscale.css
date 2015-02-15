@@ -138,7 +138,7 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(http://upload.wikimedia.org/wikipedia/commons/d/d6/AmsterdamSkyline.jpg) no-repeat top center scroll;
+    background: url(/static/AmsterdamSkyline.png) no-repeat top center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
