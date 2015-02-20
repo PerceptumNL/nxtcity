@@ -1,5 +1,6 @@
 {% load staticfiles %}
 {% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -60,6 +61,15 @@
                     <li>
 						<a class="page-scroll" href="#contact">{% trans "Contact" context "header" %}</a>
                     </li>
+					{% if LANGUAGE_CODE == 'nl' %}
+					<li>
+						<a class="page-scroll" href="/en">English</a>
+                    </li>
+					{% else %}
+					<li>
+						<a class="page-scroll" href="/nl">Nederlands</a>
+                    </li>
+					{% endif %}
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
