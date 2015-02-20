@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% load static core_tags i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+
+{% block body_params %}id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"{% endblock %}
+
+{% block content %}
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa fa-play-circle"></i>  <span class="light">NXT</span>CITY
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    {% for section in self.sections.all %}
+                    <li>
+                        <a class="page-scroll" href="#s{{ section.pk }}">
+                            {{ section.short_title }}
+                        </a>
+                    </li>
+					{% endfor %}
+					{% if self.language == 'nl' %}
+					<li>
+						<a class="page-scroll" href="/en">English</a>
+                    </li>
+					{% else %}
+					<li>
+						<a class="page-scroll" href="/nl">Nederlands</a>
+                    </li>
+					{% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">{{ self.display_title }}</h1>
+                        <div class="intro-text">
+                            {{ self.tag_line|safe }}
+						</div>
+						<a href="#s{{ self.sections.first.pk }}" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    {% for section in self.sections.all %}
+    <section id="s{{ section.pk }}" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>{{ section.title }}</h2>
+                {{ section.body|safe }}
+            </div>
+        </div>
+    </section>
+    {% endfor %}
+
+	<!-- Partners Section -->
+    <section id="partners" class="container content-section text-center">
+		<div class="row">
+			<h2>Partners</h2>
+			<div class="well">
+				<img src="http://rcjurriaans.github.io/CodeCult/img/icons/logo_alt.png" />
+				<img src="http://www.amsterdam.nl/publish/pages/633808/gasd_sponsorlogo_cmyk.jpg" />
+			</div>
+		</div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>{{ self.footer_content|safe }}</p>
+        </div>
+    </footer>
+{% endblock %}
