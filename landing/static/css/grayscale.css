@@ -161,6 +161,16 @@ a:focus {
 	color: #000;
 }
 
+#partners .well {
+	background: #fff;
+}
+
+#partners img {
+	max-width: 300px;
+	max-height: 200px;
+	padding-left: 30px;
+}
+
 @media(min-width:767px) {
     .intro {
         height: 100%;
