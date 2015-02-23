@@ -59,3 +59,9 @@ class Partner(models.Model):
         FieldPanel('url'),
         ImageChooserPanel('logo')
     ]
+
+    def __str__(self):
+        return unicode(self).encode('utf-8')
+
+    def __unicode__(self):
+        return unicode(self.name)
