@@ -115,7 +115,7 @@ STATICFILES_FINDERS = (
 # must be in line with assetstorage.models and assetstorage.urls
 DBS_OPTIONS = {
     "table": "assetstorage_asset",
-    "base_url": ""
+    "base_url": "/asset/"
 }
 DEFAULT_FILE_STORAGE = 'assetstorage.models.DatabaseStorageWrapper'
 

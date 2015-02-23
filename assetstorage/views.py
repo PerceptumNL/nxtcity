@@ -7,8 +7,7 @@ import os, mimetypes
 def asset(request, filename):
     # Read file from database
     storage = DatabaseStorageWrapper()
-    image_file = storage.open(
-            os.path.join(settings.DBS_OPTIONS['base_url'],filename), 'rb')
+    image_file = storage.open(filename, 'rb')
     if not image_file:
       raise Http404
     file_content = image_file.read()
