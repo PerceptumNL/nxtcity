@@ -6,6 +6,8 @@ from django.conf import settings
 from wagtail.wagtailcore.models import Page, Orderable
 from wagtail.wagtailadmin.edit_handlers import FieldPanel, InlinePanel
 from wagtail.wagtailcore.fields import RichTextField
+from wagtail.wagtailsnippets.models import register_snippet
+from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
 
 from modelcluster.fields import ParentalKey
 
@@ -45,3 +47,15 @@ LandingPage.content_panels = [
     FieldPanel('footer_content', classname="full"),
 ]
 
+@register_snippet
+class Partner(models.Model):
+    name = models.CharField(max_length=255, null=False, blank=False)
+    url = models.URLField(default="", null=False, blank=True)
+    logo = models.ForeignKey('wagtailimages.Image', null=True, blank=True,
+            on_delete=models.SET_NULL, related_name='+')
+
+    panels = [
+        FieldPanel('name'),
+        FieldPanel('url'),
+        ImageChooserPanel('logo')
+    ]
