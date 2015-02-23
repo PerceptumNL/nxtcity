@@ -1,0 +1,9 @@
+{% load wagtailimages_tags %}
+<div class="row">
+	<h2>Partners</h2>
+	<div class="well">
+	{% for partner in partners %}
+		{% image partner.logo max-300x300 %}
+	{% endfor %}
+	</div>
+</div>
