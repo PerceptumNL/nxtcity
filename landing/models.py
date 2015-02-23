@@ -31,7 +31,8 @@ class LandingPage(Page):
     language = models.CharField(max_length=10, null=False, blank=False,
             choices=settings.LANGUAGES)
     display_title = models.CharField(max_length=255)
-    tag_line = RichTextField()
+    tag_line = models.CharField(max_length=255, null=False, blank=False)
+    notification = RichTextField(blank=True, default="")
     footer_content = RichTextField()
 
 LandingPage.content_panels = [
@@ -40,6 +41,7 @@ LandingPage.content_panels = [
     FieldPanel('display_title'),
     InlinePanel(LandingPage, 'sections', label="Sections"),
     FieldPanel('tag_line'),
+    FieldPanel('notification'),
     FieldPanel('footer_content', classname="full"),
 ]
 

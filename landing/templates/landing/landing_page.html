@@ -51,7 +51,8 @@
                     <div class="col-md-8 col-md-offset-2">
                         <h1 class="brand-heading">{{ self.display_title }}</h1>
                         <div class="intro-text">
-                            {{ self.tag_line|safe }}
+							<strong>{{ self.tag_line }}</strong><br />
+							{{ self.notification|safe }}
 						</div>
 						<a href="#s{{ self.sections.first.pk }}" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
