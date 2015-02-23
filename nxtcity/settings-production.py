@@ -38,6 +38,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'assetstorage',
+
     'compressor',
     'taggit',
     'modelcluster',
@@ -109,8 +111,13 @@ STATICFILES_FINDERS = (
     'compressor.finders.CompressorFinder',
 )
 
-MEDIA_ROOT = join(PROJECT_ROOT, 'media')
-MEDIA_URL = '/media/'
+# Options for database file storing,
+# must be in line with assetstorage.models and assetstorage.urls
+DBS_OPTIONS = {
+    "table": "assetstorage_asset",
+    "base_url": ""
+}
+DEFAULT_FILE_STORAGE = 'assetstorage.models.DatabaseStorageWrapper'
 
 
 # Django compressor settings
