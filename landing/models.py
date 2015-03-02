@@ -31,6 +31,7 @@ class LandingPageSection(Orderable, models.Model):
     ]
 
 class LandingPage(Page):
+    """Creates a one-pager."""
     language = models.CharField(max_length=10, null=False, blank=False,
             choices=settings.LANGUAGES)
     display_title = models.CharField(max_length=255)
