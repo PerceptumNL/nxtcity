@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="well form-container">
+							<h2>{{ self.title }}</h2>
+                            {{ self.thank_you_text }}
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+{% endblock %}
