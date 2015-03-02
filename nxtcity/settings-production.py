@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 """
 
 from os.path import abspath, dirname, join
+from os import environ
 
 # Absolute filesystem path to the Django project directory:
 PROJECT_ROOT = dirname(dirname(abspath(__file__)))
@@ -160,9 +161,9 @@ WAGTAIL_SITE_NAME = "NxtCity Amsterdam 2015"
 # Whether to use face/feature detection to improve image cropping - requires OpenCV
 WAGTAILIMAGES_FEATURE_DETECTION_ENABLED = False
 
-EMAIL_HOST_USER = os.environ['SENDGRID_USERNAME']
+EMAIL_HOST_USER = environ['SENDGRID_USERNAME']
 EMAIL_HOST= 'smtp.sendgrid.net'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_PASSWORD = os.environ['SENDGRID_PASSWORD']
+EMAIL_HOST_PASSWORD = environ['SENDGRID_PASSWORD']
 SERVER_EMAIL = 'nxtcity-platform@perceptum.nl'
