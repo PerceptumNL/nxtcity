@@ -59,6 +59,8 @@ INSTALLED_APPS = (
     'core',
 
     'landing',
+
+    'widget_tweaks',
 )
 
 MIDDLEWARE_CLASSES = (
