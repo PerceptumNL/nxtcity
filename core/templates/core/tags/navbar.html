@@ -1,3 +1,5 @@
+{% load wagtailcore_tags core_tags %}
+
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
 	<div class="container">
 		<div class="navbar-header">
@@ -15,13 +17,19 @@
 				<li class="hidden">
 					<a href="#page-top"></a>
 				</li>
-				{% if self.language == 'nl' %}
+				{% for menuitem in menuitems %}
+				<li class="{% if calling_page.url == menuitem.url %}active{% endif %}">
+					<a href="{% pageurl menuitem %}">{{ menuitem.title }}</a>
+				</li>
+				{% endfor %}
+				{% get_site_language calling_page as lang %}
+				{% if lang == 'nl' %}
 				<li>
-					<a class="page-scroll" href="/en">English</a>
+					<a href="/en">English</a>
 				</li>
 				{% else %}
 				<li>
-					<a class="page-scroll" href="/nl">Nederlands</a>
+					<a href="/nl">Nederlands</a>
 				</li>
 				{% endif %}
 			</ul>
