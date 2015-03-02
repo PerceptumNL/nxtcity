@@ -3,6 +3,8 @@
 {% load static core_tags i18n partner_tags %}
 {% get_current_language as LANGUAGE_CODE %}
 
+{% block body_class %}bg-dark{% endblock %}
+
 {% block body_params %}id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"{% endblock %}
 
 {% block content %}
