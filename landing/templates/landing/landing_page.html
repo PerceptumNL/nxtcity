@@ -6,44 +6,6 @@
 {% block body_params %}id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"{% endblock %}
 
 {% block content %}
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="fa fa-play-circle"></i>  <span class="light">NXT</span>CITY
-                </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    {% for section in self.sections.all %}
-                    <li>
-                        <a class="page-scroll" href="#s{{ section.pk }}">
-                            {{ section.short_title }}
-                        </a>
-                    </li>
-					{% endfor %}
-					{% if self.language == 'nl' %}
-					<li>
-						<a class="page-scroll" href="/en">English</a>
-                    </li>
-					{% else %}
-					<li>
-						<a class="page-scroll" href="/nl">Nederlands</a>
-                    </li>
-					{% endif %}
-                </ul>
-            </div>
-        </div>
-    </nav>
-
     <header class="intro">
         <div class="intro-body">
             <div class="container">

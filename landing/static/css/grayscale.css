@@ -162,6 +162,11 @@ a:focus {
 	padding: 10px;
 }
 
+.form-container {
+	background-color: #fff;
+	color: #000;
+}
+
 #partners .well {
 	background: #fff;
 }
@@ -182,6 +187,10 @@ a:focus {
 
     .intro .intro-body .intro-text {
         font-size: 25px;
+    }
+
+    .form-container {
+        margin-top: 70px;
     }
 }
 

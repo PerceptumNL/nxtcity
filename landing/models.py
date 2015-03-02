@@ -4,10 +4,11 @@ from django.http import HttpResponseRedirect
 from django.conf import settings
 
 from wagtail.wagtailcore.models import Page, Orderable
-from wagtail.wagtailadmin.edit_handlers import FieldPanel, InlinePanel
+from wagtail.wagtailadmin.edit_handlers import FieldPanel, InlinePanel, MultiFieldPanel
 from wagtail.wagtailcore.fields import RichTextField
 from wagtail.wagtailsnippets.models import register_snippet
 from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
+from wagtail.wagtailforms.models import AbstractEmailForm, AbstractFormField
 
 from modelcluster.fields import ParentalKey
 
@@ -65,3 +66,24 @@ class Partner(models.Model):
 
     def __unicode__(self):
         return unicode(self.name)
+
+class FormField(AbstractFormField):
+    page = ParentalKey('FormPage', related_name='form_fields')
+
+class FormPage(AbstractEmailForm):
+    intro = RichTextField(blank=True)
+    thank_you_text = RichTextField(blank=True)
+    submit_text = models.CharField(max_length=255, default="Submit")
+
+FormPage.content_panels = [
+    FieldPanel('title', classname="full title"),
+    FieldPanel('intro', classname="full"),
+    InlinePanel(FormPage, 'form_fields', label="Form fields"),
+    FieldPanel('submit_text', classname="full"),
+    FieldPanel('thank_you_text', classname="full"),
+    MultiFieldPanel([
+        FieldPanel('to_address', classname="full"),
+        FieldPanel('from_address', classname="full"),
+        FieldPanel('subject', classname="full"),
+    ], "Email")
+]
