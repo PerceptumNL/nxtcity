@@ -14,7 +14,7 @@ def get_site_root(context, current_page):
     root_page = context['request'].site.root_page
     try:
         root_page.languageredirectionpage
-    except root.RelatedObjectDoesNotExist:
+    except root_page.DoesNotExist:
         return root_page
     else:
         page_ptr = current_page
@@ -33,7 +33,7 @@ def get_site_language(context, current_page):
     root_page = get_site_root(context, current_page)
     try:
         landing_page = root_page.landingpage
-    except root_page.RelatedObjectDoesNotExist:
+    except root_page.DoesNotExist:
         from django.utils import translation
         return translation.get_language()
     else:
