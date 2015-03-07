@@ -16,7 +16,7 @@
                         <h1 class="brand-heading">{{ self.display_title }}</h1>
                         <div class="intro-text">
 							<strong>{{ self.tag_line }}</strong><br />
-							{{ self.notification|safe }}
+							{{ self.notification|richtext }}
 						</div>
 						<a href="#s{{ self.sections.first.pk }}" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
