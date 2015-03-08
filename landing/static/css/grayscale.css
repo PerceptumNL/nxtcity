@@ -86,6 +86,11 @@ a:focus {
     font-weight: 700;
 }
 
+
+.navbar-custom .navbar-brand img {
+	max-height: 30px;
+}
+
 .navbar-custom .navbar-brand:focus {
     outline: 0;
 }
