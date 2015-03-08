@@ -15,8 +15,7 @@ from modelcluster.fields import ParentalKey
 class LanguageRedirectionPage(Page):
 
     def serve(self, request):
-        language = translation.get_language_from_request(request)
-        return HttpResponseRedirect(self.url + language + '/')
+        return HttpResponseRedirect(self.url + settings.LANGUAGE_CODE + '/')
 
 class LandingPageSection(Orderable, models.Model):
     page = ParentalKey('LandingPage', related_name='sections')
@@ -38,6 +37,11 @@ class LandingPage(Page):
     tag_line = models.CharField(max_length=255, null=False, blank=False)
     notification = RichTextField(blank=True, default="")
     footer_content = RichTextField()
+
+    def serve(self, request):
+        translation.activate(self.language)
+        request.session[translation.LANGUAGE_SESSION_KEY] = self.language
+        return super(LandingPage, self).serve(request)
 
 LandingPage.content_panels = [
     FieldPanel('language'),

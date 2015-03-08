@@ -1,4 +1,4 @@
-{% load wagtailcore_tags core_tags %}
+{% load wagtailcore_tags core_tags i18n %}
 
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
 	<div class="container">
@@ -6,7 +6,8 @@
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
 				<i class="fa fa-bars"></i>
 			</button>
-			<a class="navbar-brand page-scroll" href="/#page-top">
+			{% get_current_language as LANGUAGE_CODE %}
+			<a class="navbar-brand page-scroll" href="/{{LANGUAGE_CODE}}/#page-top">
 				<i class="fa fa-play-circle"></i>  <span class="light">NXT</span>CITY
 			</a>
 		</div>
