@@ -370,3 +370,29 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: rgba(255,255,255,.2);
 }
+
+.blog {
+    display: table;
+    width: 100%;
+    height: 100%;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    background: url(/static/img/AmsterdamSkyline.png) no-repeat top center scroll;
+    background-color: #000;
+    background-attachment:fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.blog .blog-body {
+	display: block;
+	vertical-align: middle;
+}
+
+.blog .blog-body .blog-title {
+	font-size: 80px;
+}
+

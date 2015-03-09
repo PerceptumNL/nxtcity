@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+
+{% block body_class %}bg-dark{% endblock %}
+
+
+{% block content %}
+
+    <div class="blog">
+        <div class="blog-body top-space">
+            <div class="container">
+                <div class="row">
+                     <div class="col-md-8 col-md-offset-2">
+						 {% for entry in self.blog_entries.all %}
+                          <div class="blog-title">
+                              {{ entry.title|richtext }}
+                          </div>
+                          <p>
+                             {{ entry.date|date}}
+                          </p>
+                          <div class="well top-space bg-light">
+                            <div align="left">{{ entry.body|richtext }}</div>
+                          </div>
+                          {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+	
+
+{% endblock %}

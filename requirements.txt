@@ -6,6 +6,7 @@ beautifulsoup4==4.3.2
 dj-database-url==0.3.0
 dj-static==0.0.6
 django-appconf==1.0.1
+django-ganalytics==0.4
 django-compressor==1.4
 django-database-storage==0.1.2
 django-libsass==0.2
