@@ -42,6 +42,8 @@ INSTALLED_APPS = (
     'taggit',
     'modelcluster',
 
+    'ganalytics',
+
     'wagtail.wagtailcore',
     'wagtail.wagtailadmin',
     'wagtail.wagtaildocs',
@@ -171,3 +173,5 @@ WAGTAIL_SITE_NAME = "NxtCity Amsterdam 2015"
 
 # Whether to use face/feature detection to improve image cropping - requires OpenCV
 WAGTAILIMAGES_FEATURE_DETECTION_ENABLED = False
+
+GANALYTICS_TRACKING_CODE = 'ENTER_YOUR_GA_TRACKING_CODE_HERE'
