@@ -45,6 +45,8 @@ INSTALLED_APPS = (
     'taggit',
     'modelcluster',
 
+    'ganalytics',
+
     'wagtail.wagtailcore',
     'wagtail.wagtailadmin',
     'wagtail.wagtaildocs',
@@ -167,3 +169,5 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_PASSWORD = environ['SENDGRID_PASSWORD']
 SERVER_EMAIL = 'nxtcity-platform@perceptum.nl'
+
+GANALYTICS_TRACKING_CODE = 'UA-60536159-1'
