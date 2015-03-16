@@ -206,6 +206,12 @@ a:focus {
     .top-space {
         margin-top: 70px;
     }
+    
+    .top-blog-space {
+		margin-top: 35px;
+		padding: 30px;
+		margin-bottom: 150px;
+	}
 }
 
 .btn-circle {
@@ -393,6 +399,18 @@ body {
 }
 
 .blog .blog-body .blog-title {
-	font-size: 80px;
+	font-size: 55px;
+	color: #fff;
+	text-shadow: 2px 2px #000;
+}
+
+.blog .blog-body .blog-date {
+	font-size: 25px;
+	color: #fff;
+	text-shadow: 1px 1px #000
+}
+
+.blog p {
+	font-size: 18px;
 }
 

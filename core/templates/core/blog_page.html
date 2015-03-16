@@ -14,11 +14,10 @@
                           <div class="blog-title">
                               {{ self.title|richtext }}
                           </div>
-                          <p>
-                             {{ self.date|date}}
-                          </p>
-                          <div class="well top-space bg-light">
-                            <div align="left">{{ self.body|richtext }}</div>
+                          <div class="well top-blog-space bg-light">
+							<div align="left">{{ self.body|richtext }}</div>
+							<div align="right" style="color: #606060"><i>{{ self.author|richtext}}
+							{{ self.date|date }}</i></div>
                           </div>
                         </div>
                     </div>
