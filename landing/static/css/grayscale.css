@@ -377,6 +377,7 @@ body {
     webkit-tap-highlight-color: rgba(255,255,255,.2);
 }
 
+/* ----- Layout for the blog ----- */
 .blog {
     display: table;
     width: 100%;
@@ -414,3 +415,114 @@ body {
 	font-size: 18px;
 }
 
+/* ----- Layout for the challenges ----- */
+.challenge {
+	display: table;
+    width: 100%;
+    height: 100%;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    background: url(/static/img/AmsterdamSkyline.png) no-repeat top center scroll;
+    /*background-color: #000;*/
+    background-attachment:fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.challenge .challenge-body{
+	display: block;
+	vertical-align: middle;
+}
+
+.challenge .challenge-body .challenge-title{
+	font-size: 55px;
+	text-align: center;
+	color: #fff;
+	text-shadow: 2px 2px #000;
+}
+
+.challenge .challenge-body .challenge-picture{
+	float: right;
+	padding: 15px;
+}
+
+.challenge p{
+	font-size: 18px;
+}
+
+
+/* ----- Layout for the challenge index page ----- */
+
+.challenge .challenge-index-body{
+	display: block;
+	vertical-align: middle;
+}
+
+.challenge .challenge-index-body .challenge-index-title{
+	font-size: 50px;
+	text-align: center;
+	padding: 40px;
+	color: #fff;
+	text-shadow: 2px 2px #000;
+}
+
+.challenge .challenge-index-body .challenge-topic-title{
+	font-size: 30px;
+	text-align: center;
+	color: #fff;
+	padding: 15px;
+	text-shadow: 1px 1px #000;
+}
+
+.challenge .challenge-index-body .challenge-topic-short{
+	font-size: 25px;
+	text-align: left;
+	padding: 10px;
+}
+
+.challenge .challenge-index-body .challenge-topic-image{
+	padding: 15px;
+}
+
+/* ----- Layout for Partner Page ----- */
+.partnerpage {
+    display: table;
+    width: 100%;
+    height: 100%;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    background: url(/static/img/AmsterdamSkyline.png) no-repeat top center scroll;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.partnerpage .partnerpage-body {
+    display: block;
+    vertical-align: middle;
+}
+
+.partnerpage .partnerpage-body .partnerpage-title{
+	font-size: 50px;
+	color: #fff;
+	text-shadow: 1.8px 1.8px #000; 
+}
+
+.partnerpage .partnerpage-body .partner-name{
+	font-size: 30px;
+	color: #fff;
+	text-align: left;
+	padding-top: 10px;
+	text-shadow: 1.5px 1.5px #000;
+}
+
+.partnerpage .partnerpage-body .partner-text{
+	text-align: left;
+	padding-top: 30px;
+}

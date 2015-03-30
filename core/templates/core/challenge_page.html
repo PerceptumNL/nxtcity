@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
+
+{% block body_class %}bg-dark{% endblock %}
+
+
+{% block content %}
+    <div class = "challenge">
+        <div class = "challenge-body top-space">
+            <div class = "container">
+                <div class = "row">
+                    <div class = "col-md-8 col-md-offset-2">
+                        <div class = "challenge-title">
+                            {{ self.title|richtext }}
+                        </div>
+                        <div class = "well top-blog-space bg-light">
+                            <div class = "challenge-picture">
+                                {% image self.picture fill-400x400 %}
+                            </div>
+                            <div align = "left">
+                                {{ self.body|richtext }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

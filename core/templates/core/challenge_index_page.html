@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
+
+{% block body_class %}bg-dark{% endblock %}
+
+
+{% block content %}
+    <div class = "challenge">
+        <div class = "challenge-index-body top-space">
+            <div class = "container">
+                <div class = "row">
+                    <div class = "col-md-8 col-md-offset-2">
+                        <div class = "challenge-index-title">
+                            {{ self.title|richtext }}
+                        </div>
+                            {% for challenge in self.challenges.all %}
+                                {% if forloop.counter0|divisibleby:3 %}
+                                    <div class = "row">
+                                {% endif %}
+                                        <div class = "col-md-4">
+                                            <div class = "challenge-topic-title">
+                                                {{ challenge.title|richtext }}
+                                            </div>
+                                            <div class = "challenge-topic-image">
+                                                {% image challenge.picture fill-120x120 %}
+                                            </div>
+                                            <div class = "challenge-topic-short bg-light">
+                                                {{ challenge.short_description }}
+                                            </div>
+                                        </div>
+                                {% if forloop.counter0|divisibleby:2 and forloop.counter0 > 0 %}
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}
