@@ -487,5 +487,47 @@ body {
 	padding: 15px;
 }
 
+<<<<<<< HEAD
 
 
+=======
+/* ----- Layout for Partner Page ----- */
+.partnerpage {
+    display: table;
+    width: 100%;
+    height: 100%;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    background: url(/static/img/AmsterdamSkyline.png) no-repeat top center scroll;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.partnerpage .partnerpage-body {
+    display: block;
+    vertical-align: middle;
+}
+
+.partnerpage .partnerpage-body .partnerpage-title{
+	font-size: 50px;
+	color: #fff;
+	text-shadow: 1.8px 1.8px #000; 
+}
+
+.partnerpage .partnerpage-body .partner-name{
+	font-size: 30px;
+	color: #fff;
+	text-align: left;
+	padding-top: 10px;
+	text-shadow: 1.5px 1.5px #000;
+}
+
+.partnerpage .partnerpage-body .partner-text{
+	text-align: left;
+	padding-top: 30px;
+}
+>>>>>>> master

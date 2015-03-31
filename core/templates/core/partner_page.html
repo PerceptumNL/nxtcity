@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
+
+{% block body_class %}bg-dark{% endblock %}
+
+
+{% block content %}
+	<div class="partnerpage">
+		<div class="partnerpage-body ">
+			<div class="container">
+                <div class="row">
+                     <div class="col-md-8 col-md-offset-2">
+						 <div class = "partnerpage-title">
+							{{self.title|richtext}}
+						 </div>
+						 <div style = "font-size:30px; text-shadow:1px 1px #000; padding-bottom:30px">
+							 {{ self.body|richtext }}
+						 </div>
+						 {% for partner in self.partners.all %}
+							<div class = "partner-name">
+								<div style = "clear:both">{{ partner.title }}</div>
+							</div>
+							<div class = "well well-sm clearfix bg-light">
+								{% if forloop.counter|divisibleby:2 %}
+									<div style = "float:right;padding:12px;">{% image partner.logo fill-100x100 %}</div>
+								{% else %}
+									<div style = "float:left;padding:12px">{% image partner.logo fill-100x100 %}</div>
+								{% endif %}
+								<div class = "partner-text">
+									{{ partner.body|richtext }}
+								</div>
+							</div>
+						 {% endfor %}
+						 </div>
+					 </div>
+				 </div>
+			 </div>
+		</div>
+	</div>
+	
+
+
+
+{% endblock %}

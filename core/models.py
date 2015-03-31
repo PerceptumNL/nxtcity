@@ -1,7 +1,7 @@
 from django.db import models
 
 from wagtail.wagtailadmin.edit_handlers import FieldPanel, InlinePanel
-from wagtail.wagtailcore.models import Page
+from wagtail.wagtailcore.models import Page, Orderable
 from wagtail.wagtailcore.fields import RichTextField
 from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
 
@@ -101,6 +101,39 @@ ChallengeIndexPage.content_panels = [
     FieldPanel('title', classname = "full title"),
     FieldPanel('body')
 ]
+
+
+"""
+Seperate section for every partner 
+"""
+class PartnerPageSection(Orderable, models.Model):
+    page = ParentalKey('PartnerPage', related_name = 'partners')
+    title = models.CharField(default = '', max_length = 255, null = True, blank = True)
+    body = models.CharField(default = '', max_length = 255, null = True, blank = True)
+    logo = models.ForeignKey('wagtailimages.Image', null = True, blank = True,
+        on_delete = models.SET_NULL, related_name = '+') 
+
+
+PartnerPageSection.content_panels = [
+    FieldPanel('title', classname = "full title"),
+    FieldPanel('body'),
+    ImageChooserPanel('logo')
+]
+
+
+"""
+Page for displaying all our partners and link to form
+"""
+class PartnerPage(Page):
+    body = RichTextField()
+
+PartnerPage.content_panels = [
+    FieldPanel('title', classname = "full title"),
+    FieldPanel('body'),
+    InlinePanel(PartnerPage, 'partners', label = "Partner")
+]
+
+
 
 
 
