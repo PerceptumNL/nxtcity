@@ -22,6 +22,8 @@
         <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
         <link href="{% static 'css/grayscale.css' %}" rel="stylesheet">
+        
+        <link rel="shortcut icon" type="image/png" href="{% static 'img/favlogo_white.ico' %}"/>
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -32,6 +34,20 @@
 
         {% block extra_css %}
         {% endblock %}
+        
+        <!-- Twitter Card Meta Data -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@nxtcityorg" />
+        <!-- The title will be truncated at 70 characters-->
+        <meta name="twitter:title" content="NxtCity 2015" />
+        <!-- Description will be clickable link to provided url. Can be no longer than 200 characters -->
+        <meta name="twitter:description" content="Teams van middelbare scholieren richten zich twee dagen op één van de vraagstukken uit hun stad. Echte oplossingen verzinnen voor echte problemen. Echt leerzaam." />
+        
+        <!-- Image needs to be atleast 120px by 120px and at most 1MB -->
+        <!-- Sidenote: no clue if static file serving is going to work with this -->
+        <meta name="twitter:image" content="{% static 'img/logo_square.png' %}" />
+        <meta name="twitter:url" content="http://www.nxtcity.org" />
+        
     </head>
 
     <body class="{% block body_class %}{% endblock %}" {% block body_params %}{% endblock %}>

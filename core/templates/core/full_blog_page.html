@@ -14,12 +14,14 @@
 						 {% for entry in self.blog_entries.all %}
                           <div class="blog-title">
                               {{ entry.title|richtext }}
-                          </div>
-                          <p>
+                          </div>                          
+						  <!--<div class="blog-date">
                              {{ entry.date|date}}
-                          </p>
-                          <div class="well top-space bg-light">
+                          </div>  -->                         
+                          <div class="well top-blog-space bg-light">
                             <div align="left">{{ entry.body|richtext }}</div>
+                            <div align="right" style="color: #606060"><i>{{ entry.author|richtext}}
+                            {{ entry.date|date }}</i></div>
                           </div>
                           {% endfor %}
                         </div>
