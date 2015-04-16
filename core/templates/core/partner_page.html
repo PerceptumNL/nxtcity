@@ -23,9 +23,9 @@
 							</div>
 							<div class = "well well-sm clearfix bg-light">
 								{% if forloop.counter|divisibleby:2 %}
-									<div style = "float:right;padding:12px;">{% image partner.logo fill-100x100 %}</div>
+									<div style = "float:right;padding:12px;">{% image partner.logo height-100 %}</div>
 								{% else %}
-									<div style = "float:left;padding:12px">{% image partner.logo fill-100x100 %}</div>
+									<div style = "float:left;padding:12px">{% image partner.logo height-100 %}</div>
 								{% endif %}
 								<div class = "partner-text">
 									{{ partner.body|richtext }}
