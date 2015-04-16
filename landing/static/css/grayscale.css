@@ -487,10 +487,10 @@ body {
 	padding: 15px;
 }
 
-<<<<<<< HEAD
 
 
-=======
+
+
 /* ----- Layout for Partner Page ----- */
 .partnerpage {
     display: table;
@@ -528,6 +528,7 @@ body {
 
 .partnerpage .partnerpage-body .partner-text{
 	text-align: left;
-	padding-top: 30px;
+	padding: 20px;
+	line-height: 25px;
 }
->>>>>>> master
+
