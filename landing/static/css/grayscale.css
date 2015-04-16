@@ -501,6 +501,7 @@ body {
     color: #fff;
     background: url(/static/img/AmsterdamSkyline.png) no-repeat top center scroll;
     background-color: #000;
+    background-attachment:fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -527,6 +528,7 @@ body {
 }
 
 .partnerpage .partnerpage-body .partner-text{
+	font-size: 18px;
 	text-align: left;
 	padding: 20px;
 	line-height: 25px;
