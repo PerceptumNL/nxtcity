@@ -456,6 +456,7 @@ body {
 
 /* ----- Layout for the challenge index page ----- */
 
+
 .challenge .challenge-index-body{
 	display: block;
 	vertical-align: middle;
@@ -473,14 +474,14 @@ body {
 	font-size: 30px;
 	text-align: center;
 	color: #fff;
-	padding: 15px;
+	background-color: rgba(35, 154, 161, 0.75);
 	text-shadow: 1px 1px #000;
 }
 
 .challenge .challenge-index-body .challenge-topic-short{
-	font-size: 25px;
+	font-size: 20px;
 	text-align: left;
-	padding: 10px;
+	padding: 15px;
 }
 
 .challenge .challenge-index-body .challenge-topic-image{
@@ -523,8 +524,11 @@ body {
 	font-size: 30px;
 	color: #fff;
 	text-align: left;
-	padding-top: 10px;
-	text-shadow: 1.5px 1.5px #000;
+	background-color: rgba(35, 154, 161, 0.75);
+}
+.partner-name h2{
+	padding: 16px 10px 10px;
+	margin: 40px 0 0;
 }
 
 .partnerpage .partnerpage-body .partner-text{

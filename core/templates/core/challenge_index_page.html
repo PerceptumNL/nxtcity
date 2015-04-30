@@ -7,7 +7,7 @@
 
 {% block content %}
     <div class = "challenge">
-        <div class = "challenge-index-body top-space">
+        <div class = "challenge-index-body">
             <div class = "container">
                 <div class = "row">
                     <div class = "col-md-8 col-md-offset-2">
@@ -19,15 +19,19 @@
                                     <div class = "row">
                                 {% endif %}
                                         <div class = "col-md-4">
-                                            <div class = "challenge-topic-title">
+											<a href = "{{ challenge.url}}">
+                                            <div class = "well well-sm challenge-topic-title">
                                                 {{ challenge.title|richtext }}
                                             </div>
                                             <div class = "challenge-topic-image">
+												
                                                 {% image challenge.picture fill-120x120 %}
+                                                
                                             </div>
-                                            <div class = "challenge-topic-short bg-light">
+                                            <div class = "well challenge-topic-short bg-light">
                                                 {{ challenge.short_description }}
                                             </div>
+                                            </a>
                                         </div>
                                 {% if forloop.counter0|divisibleby:2 and forloop.counter0 > 0 %}
                                     </div>
