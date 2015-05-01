@@ -472,10 +472,10 @@ body {
 }
 
 .challenge .challenge-index-body .challenge-topic-title{
-	font-size: 30px;
+	font-size: 25px;
 	text-align: center;
-	color: #fff;
-	background-color: rgba(35, 154, 161, 0.75);
+	
+	color: rgba(35, 154, 161, 0.75);
 	text-shadow: 1px 1px #000;
 }
 
