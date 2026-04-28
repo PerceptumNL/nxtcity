@@ -16,5 +16,5 @@ libsass==0.6.2
 requests==2.5.1
 six==1.9.0
 unicodecsv==0.9.4
-wagtail==0.8.4
+wagtail==6.3.8
 wsgiref==0.1.2
