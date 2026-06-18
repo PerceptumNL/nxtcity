@@ -1,4 +1,4 @@
-Django==1.7.4
+Django==4.2.30
 Pillow==2.7.0
 South==1.0
 Unidecode==0.04.17
